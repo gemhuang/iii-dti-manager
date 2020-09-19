@@ -5,11 +5,9 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 
 ReactDOM.render((
-  <React.StrictMode>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 ), document.getElementById('root'));
 
-serviceWorker.unregister(); 
+serviceWorker.unregister();
