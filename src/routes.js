@@ -5,15 +5,16 @@ import MainLayout from 'src/commons/layout/MainLayout';
 import { NotFoundView } from 'src/commons/view/NotFoundView';
 import LoginView from 'src/auth/LoginView';
 import RegisterView from 'src/auth/RegisterView';
-import AccountView from 'src/system/account/AccountView';
+import AccountView from 'src/system/account/Account';
+import SettingsView from 'src/system/setting/SettingsView';
 
 const routes = [
   {
     path: 'app',
     element: <DashboardLayout />,
     children: [
-      { path: 'account', element: <AccountView /> },
-      // { path: 'settings', element: <SettingsView /> },
+      { path: 'account', element: <Account /> },
+      { path: 'settings', element: <SettingsView /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },
