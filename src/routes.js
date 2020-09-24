@@ -2,19 +2,17 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import DashboardLayout from 'src/commons/layout/DashboardLayout';
 import MainLayout from 'src/commons/layout/MainLayout';
-import { NotFoundView } from 'src/commons/view/NotFoundView';
+import NotFoundView from 'src/commons/view/NotFoundView';
 import LoginView from 'src/auth/LoginView';
 import RegisterView from 'src/auth/RegisterView';
-import AccountView from 'src/system/account/Account';
-import SettingsView from 'src/system/setting/SettingsView';
+import AccountView from 'src/system/account/AccountView';
 
 const routes = [
   {
     path: 'app',
     element: <DashboardLayout />,
     children: [
-      { path: 'account', element: <Account /> },
-      { path: 'settings', element: <SettingsView /> },
+      { path: 'account', element: <AccountView /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },
@@ -22,10 +20,8 @@ const routes = [
     path: '/',
     element: <MainLayout />,
     children: [
-      { path: 'login', element: <LoginView /> },
-      { path: 'register', element: <RegisterView /> },
-      // { path: '404', element: <NotFoundView /> },
-      { path: '/', element: <Navigate to="/app/dashboard" /> },
+      { path: '404', element: <NotFoundView /> },
+      { path: '/', element: <Navigate to="/app" /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },

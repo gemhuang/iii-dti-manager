@@ -1,17 +1,9 @@
 import React from 'react';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/commons/component/Page';
-import Profile from './Profile';
-import ProfileDetails from './ProfileDetails';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: theme.palette.background.dark,
-    minHeight: '100%',
-    paddingBottom: theme.spacing(3),
-    paddingTop: theme.spacing(3)
-  }
-}));
+import Profile from 'src/system/account/AccountView/Profile';
+import ProfileDetails from 'src/system/account/AccountView/ProfileDetails';
+import useStyles from './styles';
 
 const Account = () => {
   const classes = useStyles();

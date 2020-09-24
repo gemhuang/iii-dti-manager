@@ -12,21 +12,7 @@ import {
   TextField,
   makeStyles
 } from '@material-ui/core';
-
-const states = [
-  {
-    value: 'alabama',
-    label: 'Alabama'
-  },
-  {
-    value: 'new-york',
-    label: 'New York'
-  },
-  {
-    value: 'san-francisco',
-    label: 'San Francisco'
-  }
-];
+import { states, user } from './models';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -34,14 +20,7 @@ const useStyles = makeStyles(() => ({
 
 const ProfileDetails = ({ className, ...rest }) => {
   const classes = useStyles();
-  const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'Alabama',
-    country: 'USA'
-  });
+  const [values, setValues] = useState(user);
 
   const handleChange = event => {
     setValues({
