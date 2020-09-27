@@ -1,15 +1,12 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import Page from 'src/commons/component/Page';
-import Profile from 'src/system/account/AccountView/Profile';
-import ProfileDetails from 'src/system/account/AccountView/ProfileDetails';
-import useStyles from './styles';
 
-const Account = () => {
+const Dashboard = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Account">
+    <Page className={classes.root} title="Dashboard">
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           <Grid item lg={4} md={6} xs={12}>
@@ -24,4 +21,4 @@ const Account = () => {
   );
 };
 
-export default Account;
+export default Dashboard;
