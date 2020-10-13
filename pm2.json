@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "dti-web",
+            "name": "iii-dti-manager",
             "script": "node_modules/react-scripts/scripts/start.js",
             "instances": 0,
             "exec_mode": "cluster",
@@ -13,7 +13,7 @@
             }
         },
         {
-            "name": "dti-web-worker",
+            "name": "iii-dti-manager-worker",
             "script": "src/serviceWorker.js",
             "instances": 1,
             "exec_mode": "cluster",
