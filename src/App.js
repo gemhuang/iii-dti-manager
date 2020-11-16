@@ -1,17 +1,17 @@
-import 'react-perfect-scrollbar/dist/css/styles.css';
 import React from 'react';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+
 import { useRoutes } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/core';
-import GlobalStyles from 'src/commons/component/GlobalStyles';
-import theme from 'src/commons/theme';
 import routes from './routes';
 
 const App = () => {
   const routing = useRoutes(routes);
+  const theme = createMuiTheme();
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
       {routing}
     </ThemeProvider>
   );
