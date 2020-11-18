@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import getStore from './store';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
+import './index.scss';
 
 const store = getStore();
 
