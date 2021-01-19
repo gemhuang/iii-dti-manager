@@ -1,16 +1,23 @@
 import React from 'react';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import {
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
-import { useRoutes } from 'react-router-dom';
-import routes from './routes';
+import MainLayout from 'src/layout/MainLayout';
 
 import './App.scss';
 
 const App = () => {
-  const routing = useRoutes(routes);
+
 
   return (
-    <div>{routing}</div>
+    <Switch>
+      <Route path="/" component={MainLayout} />
+      <Redirect to="/" />
+    </Switch>
   );
 };
 

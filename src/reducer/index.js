@@ -1,16 +1,6 @@
-export default (
-  state = {
-    loading: false,
-  },
-  action,
-) => {
-  switch (action.type) {
-    case 'finish_loading':
-      return {
-        ...state,
-        loading: true,
-      };
-    default:
-      return state;
-  }
-};
+import { combineReducers } from 'redux';
+import main from './main';
+
+export default combineReducers({
+  main
+});
